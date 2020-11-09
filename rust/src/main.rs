@@ -18,11 +18,9 @@ fn xmas() {
         "one carrot",
     ];
     for (idx, text) in numbers.iter().enumerate() {
-        println!("On the {} day of Christmas, Rust gave to me", text);
-        for item in itemlist.iter().take(idx + 1) {
-            print!(" {}", item);
-        }
-        println!("");
+        println!("On the {} day of Christmas, Rust gave to me: {}",
+                 text,
+                 itemlist[..idx+1].join(", "));
     }
 }
 
